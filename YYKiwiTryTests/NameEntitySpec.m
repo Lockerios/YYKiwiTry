@@ -13,7 +13,7 @@ SPEC_BEGIN(NameEntitySpec)
 
 describe(@"NameEntity", ^{
     context(@"Before created", ^{
-        it(@"Should has a singleon", ^{
+        it(@"Should has a singleton", ^{
             [[[NameEntity sharedInstance] shouldNot] beNil];
         });
     });

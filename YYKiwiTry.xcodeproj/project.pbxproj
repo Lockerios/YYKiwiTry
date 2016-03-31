@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B20745D5448FC6441030877 /* libPods-YYKiwiTryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8847BD6E8F60BB9ABDC9B004 /* libPods-YYKiwiTryTests.a */; };
+		A64EACBE1CAD2933002F2369 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A64EACBD1CAD2933002F2369 /* ImageDownloader.m */; };
+		A64EACC01CAD2A15002F2369 /* ImageDownloaderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A64EACBF1CAD2A15002F2369 /* ImageDownloaderSpec.m */; };
 		A65353341CACBD1900D757D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353331CACBD1900D757D6 /* main.m */; };
 		A65353371CACBD1900D757D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353361CACBD1900D757D6 /* AppDelegate.m */; };
 		A653533A1CACBD1900D757D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353391CACBD1900D757D6 /* ViewController.m */; };
@@ -32,6 +34,9 @@
 /* Begin PBXFileReference section */
 		27244A441B25ECD5BD9F9CE5 /* Pods-YYKiwiTryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYKiwiTryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYKiwiTryTests/Pods-YYKiwiTryTests.release.xcconfig"; sourceTree = "<group>"; };
 		8847BD6E8F60BB9ABDC9B004 /* libPods-YYKiwiTryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYKiwiTryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64EACBC1CAD2933002F2369 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		A64EACBD1CAD2933002F2369 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		A64EACBF1CAD2A15002F2369 /* ImageDownloaderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloaderSpec.m; sourceTree = "<group>"; };
 		A653532F1CACBD1900D757D6 /* YYKiwiTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYKiwiTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65353331CACBD1900D757D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A65353351CACBD1900D757D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +126,8 @@
 				A65353321CACBD1900D757D6 /* Supporting Files */,
 				A65353591CACC73500D757D6 /* NameEntity.h */,
 				A653535A1CACC73500D757D6 /* NameEntity.m */,
+				A64EACBC1CAD2933002F2369 /* ImageDownloader.h */,
+				A64EACBD1CAD2933002F2369 /* ImageDownloader.m */,
 			);
 			path = YYKiwiTry;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 				A653534C1CACBD1900D757D6 /* YYKiwiTryTests.m */,
 				A653534E1CACBD1900D757D6 /* Info.plist */,
 				A65353571CACC6C500D757D6 /* NameEntitySpec.m */,
+				A64EACBF1CAD2A15002F2369 /* ImageDownloaderSpec.m */,
 			);
 			path = YYKiwiTryTests;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 			files = (
 				A653533A1CACBD1900D757D6 /* ViewController.m in Sources */,
 				A653535B1CACC73500D757D6 /* NameEntity.m in Sources */,
+				A64EACBE1CAD2933002F2369 /* ImageDownloader.m in Sources */,
 				A65353371CACBD1900D757D6 /* AppDelegate.m in Sources */,
 				A65353341CACBD1900D757D6 /* main.m in Sources */,
 			);
@@ -305,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64EACC01CAD2A15002F2369 /* ImageDownloaderSpec.m in Sources */,
 				A65353581CACC6C500D757D6 /* NameEntitySpec.m in Sources */,
 				A653534D1CACBD1900D757D6 /* YYKiwiTryTests.m in Sources */,
 			);
@@ -451,6 +461,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YYKiwiTryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.YYKiwiTryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYKiwiTry.app/YYKiwiTry";
@@ -464,6 +475,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YYKiwiTryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.YYKiwiTryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYKiwiTry.app/YYKiwiTry";
