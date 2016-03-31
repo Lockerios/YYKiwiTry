@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B20745D5448FC6441030877 /* libPods-YYKiwiTryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8847BD6E8F60BB9ABDC9B004 /* libPods-YYKiwiTryTests.a */; };
 		A65353341CACBD1900D757D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353331CACBD1900D757D6 /* main.m */; };
 		A65353371CACBD1900D757D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353361CACBD1900D757D6 /* AppDelegate.m */; };
 		A653533A1CACBD1900D757D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353391CACBD1900D757D6 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		A653533F1CACBD1900D757D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A653533E1CACBD1900D757D6 /* Assets.xcassets */; };
 		A65353421CACBD1900D757D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65353401CACBD1900D757D6 /* LaunchScreen.storyboard */; };
 		A653534D1CACBD1900D757D6 /* YYKiwiTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A653534C1CACBD1900D757D6 /* YYKiwiTryTests.m */; };
+		A65353581CACC6C500D757D6 /* NameEntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A65353571CACC6C500D757D6 /* NameEntitySpec.m */; };
+		A653535B1CACC73500D757D6 /* NameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A653535A1CACC73500D757D6 /* NameEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27244A441B25ECD5BD9F9CE5 /* Pods-YYKiwiTryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYKiwiTryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYKiwiTryTests/Pods-YYKiwiTryTests.release.xcconfig"; sourceTree = "<group>"; };
+		8847BD6E8F60BB9ABDC9B004 /* libPods-YYKiwiTryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYKiwiTryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A653532F1CACBD1900D757D6 /* YYKiwiTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYKiwiTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65353331CACBD1900D757D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A65353351CACBD1900D757D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +45,10 @@
 		A65353481CACBD1900D757D6 /* YYKiwiTryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYKiwiTryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A653534C1CACBD1900D757D6 /* YYKiwiTryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYKiwiTryTests.m; sourceTree = "<group>"; };
 		A653534E1CACBD1900D757D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65353571CACC6C500D757D6 /* NameEntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameEntitySpec.m; sourceTree = "<group>"; };
+		A65353591CACC73500D757D6 /* NameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameEntity.h; sourceTree = "<group>"; };
+		A653535A1CACC73500D757D6 /* NameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameEntity.m; sourceTree = "<group>"; };
+		BEAF74AE307CC07119C8212D /* Pods-YYKiwiTryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYKiwiTryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYKiwiTryTests/Pods-YYKiwiTryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B20745D5448FC6441030877 /* libPods-YYKiwiTryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46AD046B8D05EFDD1D865B61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8847BD6E8F60BB9ABDC9B004 /* libPods-YYKiwiTryTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		553440AC95BFA687D1C9C12B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEAF74AE307CC07119C8212D /* Pods-YYKiwiTryTests.debug.xcconfig */,
+				27244A441B25ECD5BD9F9CE5 /* Pods-YYKiwiTryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A65353261CACBD1900D757D6 = {
 			isa = PBXGroup;
 			children = (
 				A65353311CACBD1900D757D6 /* YYKiwiTry */,
 				A653534B1CACBD1900D757D6 /* YYKiwiTryTests */,
 				A65353301CACBD1900D757D6 /* Products */,
+				553440AC95BFA687D1C9C12B /* Pods */,
+				46AD046B8D05EFDD1D865B61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +119,8 @@
 				A65353401CACBD1900D757D6 /* LaunchScreen.storyboard */,
 				A65353431CACBD1900D757D6 /* Info.plist */,
 				A65353321CACBD1900D757D6 /* Supporting Files */,
+				A65353591CACC73500D757D6 /* NameEntity.h */,
+				A653535A1CACC73500D757D6 /* NameEntity.m */,
 			);
 			path = YYKiwiTry;
 			sourceTree = "<group>";
@@ -107,6 +138,7 @@
 			children = (
 				A653534C1CACBD1900D757D6 /* YYKiwiTryTests.m */,
 				A653534E1CACBD1900D757D6 /* Info.plist */,
+				A65353571CACC6C500D757D6 /* NameEntitySpec.m */,
 			);
 			path = YYKiwiTryTests;
 			sourceTree = "<group>";
@@ -135,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A65353541CACBD1900D757D6 /* Build configuration list for PBXNativeTarget "YYKiwiTryTests" */;
 			buildPhases = (
+				BC2567CBDC4141F1375EB3C9 /* Check Pods Manifest.lock */,
 				A65353441CACBD1900D757D6 /* Sources */,
 				A65353451CACBD1900D757D6 /* Frameworks */,
 				A65353461CACBD1900D757D6 /* Resources */,
+				1B9799E9533C94F26637A9F9 /* Embed Pods Frameworks */,
+				20C5A8ACFB2F2619E733666B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,12 +241,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B9799E9533C94F26637A9F9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYKiwiTryTests/Pods-YYKiwiTryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20C5A8ACFB2F2619E733666B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYKiwiTryTests/Pods-YYKiwiTryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC2567CBDC4141F1375EB3C9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A653532B1CACBD1900D757D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A653533A1CACBD1900D757D6 /* ViewController.m in Sources */,
+				A653535B1CACC73500D757D6 /* NameEntity.m in Sources */,
 				A65353371CACBD1900D757D6 /* AppDelegate.m in Sources */,
 				A65353341CACBD1900D757D6 /* main.m in Sources */,
 			);
@@ -221,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65353581CACC6C500D757D6 /* NameEntitySpec.m in Sources */,
 				A653534D1CACBD1900D757D6 /* YYKiwiTryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +446,7 @@
 		};
 		A65353551CACBD1900D757D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEAF74AE307CC07119C8212D /* Pods-YYKiwiTryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YYKiwiTryTests/Info.plist;
@@ -373,6 +459,7 @@
 		};
 		A65353561CACBD1900D757D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27244A441B25ECD5BD9F9CE5 /* Pods-YYKiwiTryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YYKiwiTryTests/Info.plist;
@@ -402,6 +489,7 @@
 				A65353531CACBD1900D757D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A65353541CACBD1900D757D6 /* Build configuration list for PBXNativeTarget "YYKiwiTryTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +498,7 @@
 				A65353561CACBD1900D757D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
