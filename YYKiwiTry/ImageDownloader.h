@@ -10,14 +10,13 @@
 
 @class ImageDownloader;
 
-typedef ImageDownloader*(^downloadFinishedBlk)();
+typedef void(^downloadFinishedBlk)(UIImage *image);
 
 @interface ImageDownloader : NSObject
 
-@property (nonatomic, strong, readonly) NSString *url;
-@property (nonatomic, strong, readonly) UIImage *image;
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) UIImage *image;
 
 - (void)downloadWithUrl:(NSString *)url andDownloaded:(downloadFinishedBlk)blk;
-- (void)cancel;
 
 @end

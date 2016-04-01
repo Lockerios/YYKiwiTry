@@ -24,16 +24,56 @@ describe(@"ImageDownloader", ^{
            [[downloader.image should] beNil];
        });
    });
-    context(@"when set by downloadWithUrl_", ^{
-        __block ImageDownloader *downloader = [[ImageDownloader alloc] init];
-        [downloader downloadWithUrl:@"imageUrl" andDownloaded:^ImageDownloader *{
-            return downloader;
-        }];
+    context(@"when set by error url", ^{
+        __block ImageDownloader *downloaderMock = [KWMock mockForClass:[ImageDownloader class]];
+        beforeEach(^{
+            [downloaderMock stub:@selector(downloadWithUrl:andDownloaded:) withBlock:^id(NSArray *params) {
+                NSString *url = params[0];
+                [downloaderMock stub:@selector(url) andReturn:url];
+                
+                downloadFinishedBlk blk = params[1];
+                blk(nil);
+                
+                return nil;
+            }];
+        });
+        
        it(@"should has url as set", ^{
-           [[downloader.url should] equal:@"imageUrl"];
+           [downloaderMock downloadWithUrl:@"Error imageUrl" andDownloaded:^(UIImage *image) {
+               [[downloaderMock.url should] equal:@"Error imageUrl"];
+           }];
        });
-        pending(@"should call blk as set when download finished", ^{
-            
+        it(@"should download nothing", ^{
+            [downloaderMock downloadWithUrl:@"Error imageUrl" andDownloaded:^(UIImage *image) {
+                [[image should] beNil];
+            }];
+        });
+    });
+    context(@"when set by correct url", ^{
+        __block ImageDownloader *downloaderMock = [KWMock mockForClass:[ImageDownloader class]];
+        __block UIImage *testImage = [UIImage imageNamed:@"og.jpg"];
+        beforeEach(^{
+            [downloaderMock stub:@selector(downloadWithUrl:andDownloaded:) withBlock:^id(NSArray *params) {
+                NSString *url = params[0];
+                [downloaderMock stub:@selector(url) andReturn:url];
+                
+                downloadFinishedBlk blk = params[1];
+                
+                blk(testImage);
+                
+                return nil;
+            }];
+        });
+        
+        it(@"should has url as set", ^{
+            [downloaderMock downloadWithUrl:@"Correct imageUrl" andDownloaded:^(UIImage *image) {
+                [[downloaderMock.url should] equal:@"Correct imageUrl"];
+            }];
+        });
+        it(@"should download correct image", ^{
+            [downloaderMock downloadWithUrl:@"Correct imageUrl" andDownloaded:^(UIImage *image) {
+                [[image should] equal:testImage];
+            }];
         });
     });
 });

@@ -5,6 +5,8 @@
 
 target 'YYKiwiTry' do
 
+pod 'AFNetworking'
+
 end
 
 target 'YYKiwiTryTests' do

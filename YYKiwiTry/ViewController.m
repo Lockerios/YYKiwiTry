@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImageDownloader.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage *imageTest = [UIImage imageNamed:@"og.jpg"];
+    NSLog(@"%@",imageTest);
+    
+    ImageDownloader *downloader = [[ImageDownloader alloc] init];
+    [downloader downloadWithUrl:@"http://images.apple.com/cn/home/images/og.jpg" andDownloaded:^(UIImage *image) {
+        NSLog(@"%@",image);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
